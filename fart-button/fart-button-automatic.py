@@ -1,12 +1,13 @@
 import os
 import random
 from gpiozero import Button
+from signal import pause
 
 button = Button(2)
 
 farts = os.listdir('farts')
 
-def make_fart:
+def make_fart():
   fart = random.choice(farts)
   os.system("aplay farts/{0}".format(fart))
 
